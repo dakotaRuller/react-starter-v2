@@ -14,7 +14,7 @@ const Navbar = () => {
   const [activeMobileNav, updateActiveMobileNav] = useState(false);
   const [navItems, updateNavItems] = useState([
     {
-      content: "The Basics",
+      content: "Getting Started",
       route: appRoutes.home
     },
     {
@@ -22,7 +22,7 @@ const Navbar = () => {
       route: appRoutes.webpackBabelOverview
     },
     {
-      content: "Context",
+      content: "Context Over Redux",
       route: appRoutes.contextOverview
     },
     {

@@ -3,7 +3,7 @@ import React from 'react'
 const ContextOverview = () => {
   return (
     <>
-      <p>Context Page</p>
+      <h2>Context over Redux</h2>
     </>
   )
 };
