@@ -49,6 +49,10 @@ header.navbar {
         animation: activeMobileNavTransitionBottom 0.75s forwards;
       }
     }
+
+    @include desktop-breakpoint {
+      display: none;
+    }
   }
 
   div.main-nav-items {
@@ -68,10 +72,28 @@ header.navbar {
     a {
       margin: 5px;
       color: #000;
+
+      @include desktop-breakpoint {
+        padding: 0 0 2px 0;
+        border-bottom: 1px solid #000;
+      }
     }
 
     &.active {
       animation: activeMobileNav 0.75s forwards;
+    }
+
+    @include desktop-breakpoint {
+      flex-direction: row;
+      position: relative;
+      top: auto;
+      left: auto;
+      width: auto;
+      height: auto;
+      padding: 0 10px;
+      background-color: transparent;
+      border-bottom-right-radius: 0;
+      visibility: visible;
     }
   }
 }

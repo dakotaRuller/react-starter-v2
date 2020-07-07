@@ -1,28 +1,28 @@
 //Node Modules
-import React, { useContext, useState } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import React, { useContext, useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 //Contexts
-import ThemeContext, { ThemeContextConsumer, ThemeContextProvider } from 'contexts/ThemeContext'
+import ThemeContext, { ThemeContextConsumer, ThemeContextProvider } from 'contexts/ThemeContext';
 
 //Components
-import ThemeWrapper from 'components/global/theme-wrapper/ThemeWrapper'
-import Navbar from 'components/global/navbar/Navbar'
-import AppOverview from 'components/app-overview/AppOverview'
-import WebpackBabelOverview from 'components/webpack-babel-overview/WebpackBabelOverview'
-import ContextOverview from 'components/context-overview/ContextOverview'
-import TestingOverview from 'components/testing-overview/TestingOverview'
-import EverythingElse from 'components/everything-else/EverythingElse'
+import ThemeWrapper from 'components/global/theme-wrapper/ThemeWrapper';
+import Navbar from 'components/global/navbar/Navbar';
+import AppOverview from 'components/app-overview/AppOverview';
+import WebpackBabelOverview from 'components/webpack-babel-overview/WebpackBabelOverview';
+import ContextOverview from 'components/context-overview/ContextOverview';
+import TestingOverview from 'components/testing-overview/TestingOverview';
+import EverythingElse from 'components/everything-else/EverythingElse';
 
 //Scripts
-import appRoutes from 'scripts/constants/appRoutes'
+import appRoutes from 'scripts/constants/appRoutes';
 
 //Styles
-import './styles/main.scss'
+import './styles/main.scss';
 
-const App = props => {
+const App = () => {
   //Set updateTheme function to update the context value and set the updater to be the ThemeSwitcher.js
-  const [theme, updateTheme] = useState({activeTheme: "dark"})
+  const [theme, updateTheme] = useState({activeTheme: "dark"});
   return (
       <ThemeContextProvider value={{...theme, changeTheme: activeTheme => updateTheme({...theme, activeTheme})}}>
       <Router>

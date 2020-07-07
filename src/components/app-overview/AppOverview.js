@@ -5,10 +5,10 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 //Styles
-import 'styles/components/app-overview/AppOverview.scss'
+// import 'styles/components/app-overview/AppOverview.scss'
 
 //Scripts
-import appRoutes from "../../scripts/constants/appRoutes";
+import appRoutes from '../../scripts/constants/appRoutes'
 
 const AppOverview = () => {
   const [technologiesLinks, updateTechnologiesLinks] = useState([
@@ -30,11 +30,9 @@ const AppOverview = () => {
       </p>
       <ul>
         {technologiesLinks.map((i, id) => (
-          <>
             <li key={id}>
                <a className={"link-highlight"} href={i.link} target="_blank">{i.text}</a>
             </li>
-          </>
         ))}
       </ul>
         <p>Now that you have a list of the different technologies implemented in this application lets move onto the first section.</p>

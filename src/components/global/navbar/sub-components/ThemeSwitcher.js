@@ -5,8 +5,8 @@ import React, { useContext } from 'react'
 import ThemeContext, { ThemeContextConsumer, ThemeContextProvider } from 'contexts/ThemeContext';
 
 //Assets
-import lightIcon from 'src/assets/icons/light.svg'
-import darkIcon from 'src/assets/icons/dark-light-outline.svg'
+import lightIcon from 'assets/icons/light.svg'
+import darkIcon from 'assets/icons/dark-light-outline.svg'
 
 const ThemeSwitcher = () => {
 
