@@ -5,7 +5,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 //Scripts
-import appRoutes from "../../scripts/constants/appRoutes";
+import appRoutes from "scripts/constants/appRoutes";
 
 const ContextOverview = () => {
   return (

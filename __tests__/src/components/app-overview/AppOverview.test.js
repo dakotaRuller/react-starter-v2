@@ -6,6 +6,9 @@ import { shallow } from 'enzyme';
 import AppOverview from 'src/components/app-overview/AppOverview';
 import { Link } from 'react-router-dom';
 
+//Scripts
+import appRoutes from 'scripts/constants/appRoutes';
+
 const technologiesList = [
   {link: "https://nodejs.org/en/about/", text: "Node.js (engine)"},
   {link: "https://www.npmjs.com/", text: "Npm (package manager)"},
@@ -65,5 +68,6 @@ describe("<AppOverview/>" , () => {
   test("should have link to next local page", () => {
     expect(wrapper.find(Link)).toHaveLength(1);
     expect(wrapper.find(Link).text()).toEqual("Webpack/Babel");
+    expect(wrapper.find(Link).props().to).toEqual(appRoutes.webpackBabelOverview);
   });
 });

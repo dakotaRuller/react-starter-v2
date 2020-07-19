@@ -3,17 +3,17 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 //Components
-import ContextOverview from 'src/components/context-overview/ContextOverview';
+import TestingOverview from 'src/components/testing-overview/TestingOverview';
 import { Link } from 'react-router-dom';
 
 //Scripts
 import appRoutes from 'scripts/constants/appRoutes';
 
-describe("<ContextOverview/>" , () => {
+describe("<TestingOverview/>" , () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<ContextOverview/>)
+    wrapper = shallow(<TestingOverview/>)
   });
 
   test("should have header", () => {
@@ -21,12 +21,13 @@ describe("<ContextOverview/>" , () => {
   });
 
   test("should have informational content", () => {
-    expect(wrapper.find("p")).toHaveLength(5);
+    expect(wrapper.find("p")).toHaveLength(6);
+    expect(wrapper.find("code")).toHaveLength(12)
   });
 
   test("should have link to next local page", () => {
     expect(wrapper.find(Link)).toHaveLength(1);
-    expect(wrapper.find(Link).text()).toEqual("Testing");
-    expect(wrapper.find(Link).props().to).toEqual(appRoutes.testingOverview);
+    expect(wrapper.find(Link).text()).toEqual("Everything Else");
+    expect(wrapper.find(Link).props().to).toEqual(appRoutes.everythingElse);
   });
 });

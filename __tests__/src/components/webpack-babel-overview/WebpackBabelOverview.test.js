@@ -6,6 +6,9 @@ import { shallow } from 'enzyme';
 import WebpackBabelOverview from 'src/components/webpack-babel-overview/WebpackBabelOverview';
 import { Link } from 'react-router-dom';
 
+//Scripts
+import appRoutes from 'scripts/constants/appRoutes';
+
 describe("<WebpackBabelOverview/>" , () => {
   let wrapper;
 
@@ -29,5 +32,6 @@ describe("<WebpackBabelOverview/>" , () => {
   test("should have link to next local page", () => {
     expect(wrapper.find(Link)).toHaveLength(1);
     expect(wrapper.find(Link).text()).toEqual("Context/Redux");
+    expect(wrapper.find(Link).props().to).toEqual(appRoutes.contextOverview);
   });
 });
