@@ -17,5 +17,5 @@ server.get('/', (req, res) => {
 
 server.listen(PORT, () => {
   console.log(`App running at http://localhost:${PORT}`);
-  console.log("Press Ctrl + C to shut the app down");
+  console.log('Press Ctrl + C to shut the app down');
 });

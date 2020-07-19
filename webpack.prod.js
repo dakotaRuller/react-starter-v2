@@ -10,7 +10,7 @@ module.exports = merge(common, {
       PRODUCTION: JSON.stringify(true),
       VERSION: JSON.stringify('5fa3b9'),
       BROWSER_SUPPORTS_HTML5: true,
-      'typeof window': JSON.stringify('object')
-    })
-  ]
+      'typeof window': JSON.stringify('object'),
+    }),
+  ],
 });

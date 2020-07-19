@@ -1,23 +1,23 @@
 @mixin tablet-breakpoint() {
   @media only screen and (min-width: $tablet-min-breakpoint) {
-    @content
+    @content;
   }
 }
 
 @mixin desktop-breakpoint() {
   @media only screen and (min-width: $desktop-min-breakpoint) {
-    @content
+    @content;
   }
 }
 
 @mixin large-desktop-breakpoint() {
   @media only screen and (min-width: $large-desktop-min-breakpoint) {
-    @content
+    @content;
   }
 }
 
 @mixin custom-breakpoint($breakpoint) {
   @media only screen and (min-width: $breakpoint) {
-    @content
+    @content;
   }
 }

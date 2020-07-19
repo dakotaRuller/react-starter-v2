@@ -21,7 +21,9 @@ header.navbar {
     height: 40px;
     width: 40px;
 
-    .top, .center, .bottom {
+    .top,
+    .center,
+    .bottom {
       height: 4px;
       background-color: #000;
       border-radius: 10px;

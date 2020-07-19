@@ -6,11 +6,11 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
   },
   plugins: [
     new webpack.DefinePlugin({
-      DEVELOPMENT: JSON.stringify(true)
-    })
-  ]
+      DEVELOPMENT: JSON.stringify(true),
+    }),
+  ],
 });

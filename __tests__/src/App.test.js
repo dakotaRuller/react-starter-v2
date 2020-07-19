@@ -20,49 +20,51 @@ import { ThemeContextProvider } from 'contexts/ThemeContext';
 import appRoutes from 'scripts/constants/appRoutes';
 
 let routes = [
-  {path: appRoutes.home, component: AppOverview},
-  {path: appRoutes.webpackBabelOverview, component: WebpackBabelOverview},
-  {path: appRoutes.contextOverview, component: ContextOverview},
-  {path: appRoutes.testingOverview, component: TestingOverview},
-  {path: appRoutes.everythingElse, component: EverythingElse}
-  ];
+  { path: appRoutes.home, component: AppOverview },
+  { path: appRoutes.webpackBabelOverview, component: WebpackBabelOverview },
+  { path: appRoutes.contextOverview, component: ContextOverview },
+  { path: appRoutes.testingOverview, component: TestingOverview },
+  { path: appRoutes.everythingElse, component: EverythingElse },
+];
 
-describe("<App/>" , () => {
+describe('<App/>', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App />)
+    wrapper = shallow(<App />);
   });
 
-  test("should have ThemeContextProvider main container", () => {
+  test('should have ThemeContextProvider main container', () => {
     expect(wrapper.find(ThemeContextProvider)).toHaveLength(1);
   });
 
-  test("should have ThemeWrapper wrapper", () => {
+  test('should have ThemeWrapper wrapper', () => {
     expect(wrapper.find(ThemeWrapper)).toHaveLength(1);
   });
 
-  test("should have div.app wrapper", () => {
-    expect(wrapper.find("div.app")).toHaveLength(1);
+  test('should have div.app wrapper', () => {
+    expect(wrapper.find('div.app')).toHaveLength(1);
   });
 
-  test("should have Router wrapper", () => {
+  test('should have Router wrapper', () => {
     expect(wrapper.find(Router)).toHaveLength(1);
   });
 
-  test("should have a Navbar component", () => {
+  test('should have a Navbar component', () => {
     expect(wrapper.find(Navbar)).toHaveLength(1);
   });
 
-  test("should have a Switch wrapper", () => {
+  test('should have a Switch wrapper', () => {
     expect(wrapper.find(Switch)).toHaveLength(1);
   });
 
-  test("should have routes", () => {
+  test('should have routes', () => {
     expect(wrapper.find(Route)).toHaveLength(routes.length);
     routes.forEach((i, index) => {
       expect(wrapper.find(Route).at(index).props().path).toEqual(i.path);
-      expect(wrapper.find(Route).at(index).props().component).toEqual(i.component);
+      expect(wrapper.find(Route).at(index).props().component).toEqual(
+        i.component
+      );
     });
-  })
+  });
 });
