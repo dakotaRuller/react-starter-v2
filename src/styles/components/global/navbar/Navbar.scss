@@ -1,15 +1,47 @@
 @import 'sub-components/ThemeSwitcher';
 @import '../../../_variables';
 
+div.app-container {
+  &.theme-light {
+    header.navbar {
+      background: $nav-black;
+      color: $nav-white;
+
+      div.mobile-navbar-toggle {
+
+        .top, .bottom {
+          background-color: $nav-white;
+        }
+      }
+
+      div.main-nav-items {
+        background-color: $nav-black;
+
+        a {
+          color: $nav-white;
+          border-bottom-color: $nav-white;
+        }
+      }
+    }
+  }
+
+  &.theme-dark {
+    header.navbar {
+      background: $nav-white;
+      color: $nav-black;
+    }
+  }
+}
+
 header.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  top: 0;
   width: 100%;
   height: 45px;
   padding: 0 30px;
-  background-color: #fff;
   z-index: 99;
 
   div.mobile-navbar-toggle {
@@ -25,7 +57,7 @@ header.navbar {
     .center,
     .bottom {
       height: 4px;
-      background-color: #000;
+      background-color: $nav-black;
       border-radius: 10px;
       transition: 0.75s all;
     }
@@ -67,17 +99,23 @@ header.navbar {
     height: calc(100vh - 45px);
     width: 60%;
     padding: 10px 10%;
-    background-color: #fff;
+    background-color: $nav-white;
     border-bottom-right-radius: 35px;
     transition: 0.75s all;
 
     a {
       margin: 5px;
-      color: #000;
+      color: $nav-black;
 
       @include desktop-breakpoint {
         padding: 0 0 2px 0;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid $nav-black;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+          transition: transform 0.3s;
+        }
       }
     }
 

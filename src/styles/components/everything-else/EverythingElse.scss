@@ -1,0 +1,28 @@
+@import "../../mixins";
+
+ul {
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+    a, p {
+      margin: 5px;
+    }
+    a {
+
+      @include desktop-breakpoint {
+        align-self: flex-start;
+      }
+    }
+    p {
+      flex-basis: 50%;
+      border: none;
+    }
+    @include desktop-breakpoint {
+      flex-direction: row;
+    }
+  }
+}

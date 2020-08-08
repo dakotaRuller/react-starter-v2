@@ -1,5 +1,4 @@
-@import '../../../../_mixins.scss';
-@import '../../../../variables.scss';
+@import '../../../../_variables';
 
 div.theme-switcher-container {
   display: flex;
@@ -7,8 +6,9 @@ div.theme-switcher-container {
   height: 65%;
   width: 35%;
   max-width: 150px;
-  border: 2px solid #000;
+  border: 2px solid $nav-black;
   border-radius: 10px;
+  transition: all 0.5s;
 
   button {
     display: flex;
@@ -17,12 +17,11 @@ div.theme-switcher-container {
     width: 50%;
     -webkit-appearance: none;
     border: none;
+    cursor: pointer;
 
     img {
       width: 80%;
       min-width: 20px;
-      //Make the mobile nav change with the theme
-
       @include custom-breakpoint(330px) {
         width: 38%;
       }
@@ -31,15 +30,35 @@ div.theme-switcher-container {
 
   button.light-theme-btn {
     background-color: transparent;
+    transition: all 0.5s;
   }
 
   button.dark-theme-btn {
     background-color: #000;
     border-radius: 7px;
+    transition: all 0.5s;
   }
+}
 
-  //button.dark-theme-btn {
-  //  background-color: #000;
-  //  color: #fff;
-  //}
+div.app-container {
+  &.theme-light {
+    header.navbar {
+      div.theme-switcher-container {
+        border: 2px solid $nav-white;
+        transition: all 0.5s;
+
+        button.light-theme-btn {
+          background-color: $nav-white;
+          border-radius: 7px;
+          transition: all 0.5s;
+        }
+
+        button.dark-theme-btn {
+          background-color: transparent;
+          border-radius: 0;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
 }

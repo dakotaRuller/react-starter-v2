@@ -4,9 +4,6 @@ import React, { useState } from 'react';
 //Components
 import { Link } from 'react-router-dom';
 
-//Styles
-// import 'styles/components/app-overview/AppOverview.scss'
-
 //Scripts
 import appRoutes from '../../scripts/constants/appRoutes';
 

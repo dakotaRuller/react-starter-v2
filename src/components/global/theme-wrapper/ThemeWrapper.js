@@ -10,7 +10,6 @@ const ThemeWrapper = (props) => {
   const themeContext = useContext(ThemeContext);
   return (
     <div className={`app-container theme-${themeContext.activeTheme}`}>
-      {console.log('Theme context: ', themeContext)}
       {children}
     </div>
   );

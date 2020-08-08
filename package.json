@@ -4,7 +4,7 @@
   "description": "Starter app for react. Using react and its latest features: 16.13.1, express, webpack, babel and node.js/npm",
   "main": "server.js",
   "scripts": {
-    "format-files:all": "npx prettier --write .",
+    "format-files": "npx prettier --write .",
     "build": "webpack --config webpack.prod.js",
     "start:dev": "webpack-dev-server --open --config webpack.dev.js",
     "start": "node src/server.js",
