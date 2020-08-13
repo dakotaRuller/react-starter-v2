@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 @mixin tablet-breakpoint() {
   @media only screen and (min-width: $tablet-min-breakpoint) {

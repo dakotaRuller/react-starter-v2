@@ -1,4 +1,4 @@
-@import "../../mixins";
+@import '../../mixins';
 
 ul {
   li {
@@ -8,11 +8,11 @@ ul {
     align-items: center;
     margin: 10px;
 
-    a, p {
+    a,
+    p {
       margin: 5px;
     }
     a {
-
       @include desktop-breakpoint {
         align-self: flex-start;
       }

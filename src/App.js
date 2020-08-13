@@ -35,8 +35,8 @@ const App = () => {
     >
       <Router>
         <ThemeWrapper>
-        <Navbar />
-        <div className={'app'}>
+          <Navbar />
+          <div className={'app'}>
             <Switch>
               <Route exact path={appRoutes.home} component={AppOverview} />
               <Route
@@ -56,7 +56,7 @@ const App = () => {
                 component={EverythingElse}
               />
             </Switch>
-        </div>
+          </div>
         </ThemeWrapper>
       </Router>
     </ThemeContextProvider>

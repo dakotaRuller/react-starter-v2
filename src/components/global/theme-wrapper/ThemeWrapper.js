@@ -16,7 +16,7 @@ const ThemeWrapper = (props) => {
 };
 
 ThemeWrapper.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.array.isRequired,
 };
 
 export default ThemeWrapper;

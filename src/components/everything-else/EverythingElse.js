@@ -23,7 +23,17 @@ const EverythingElse = () => {
       link: 'https://styled-components.com/',
       description: (
         <p>
-          Styled Components is a <a href="https://medium.com/dailyjs/what-is-actually-css-in-js-f2f529a2757" target="_blank" className={"link-highlight"}>CSS-in-JS</a> library. Its a modern way for solving CSS problems in a javascript environment. It has become a industry standard technology that helps with keeping styling scoped and modular.
+          Styled Components is a{' '}
+          <a
+            href="https://medium.com/dailyjs/what-is-actually-css-in-js-f2f529a2757"
+            target="_blank"
+            className={'link-highlight'}
+          >
+            CSS-in-JS
+          </a>{' '}
+          library. Its a modern way for solving CSS problems in a javascript
+          environment. It has become a industry standard technology that helps
+          with keeping styling scoped and modular.
         </p>
       ),
     },
@@ -82,7 +92,7 @@ const EverythingElse = () => {
       <ul>
         {technologiesList.map((i, id) => (
           <li key={id}>
-            <a href={i.link} target="_blank" className={'link-highlight'}>
+            <a href={i.link} target="_blank" className={'link-highlight main-link'}>
               {i.text}
             </a>
             {i.description}

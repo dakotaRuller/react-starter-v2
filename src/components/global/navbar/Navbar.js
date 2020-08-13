@@ -46,8 +46,12 @@ const Navbar = () => {
         <div className={'bottom'} />
       </div>
       <div className={`main-nav-items ${activeMobileNav ? 'active' : ''}`}>
-        {navItems.map((navItem) => (
-          <Link to={navItem.route} onClick={() => updateActiveMobileNav(false)}>
+        {navItems.map((navItem, index) => (
+          <Link
+            key={index}
+            to={navItem.route}
+            onClick={() => updateActiveMobileNav(false)}
+          >
             {navItem.content}
           </Link>
         ))}
