@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 //Contexts
-import ThemeContext, { ThemeContextConsumer } from 'contexts/ThemeContext';
+import ThemeContext from 'contexts/ThemeContext';
 
 const ThemeWrapper = (props) => {
   const { children } = props;

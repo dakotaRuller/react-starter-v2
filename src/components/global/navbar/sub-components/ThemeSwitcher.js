@@ -13,17 +13,18 @@ import darkIcon from 'assets/icons/dark-light-outline.svg';
 
 const ThemeSwitcher = () => {
   const themeContext = useContext(ThemeContext);
+  const isDark = themeContext.activeTheme === "dark";
 
   return (
     <div className={'theme-switcher-container'}>
       <button
-        className={'light-theme-btn'}
+        className={`light-theme-btn ${isDark ? "" : "active-theme"}`}
         onClick={() => themeContext.changeTheme('light')}
       >
         <img src={lightIcon} />
       </button>
       <button
-        className={'dark-theme-btn'}
+        className={`dark-theme-btn ${isDark ? "active-theme" : ""}`}
         onClick={() => themeContext.changeTheme('dark')}
       >
         <img src={darkIcon} />
